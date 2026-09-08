@@ -1,0 +1,21 @@
+:root {
+  --ink: #251b14;
+  --coffee: #4a3324;
+  --brown: #74523a;
+  --sand: #c8a77f;
+  --cream: #f3eadc;
+  --paper: #fbf7f0;
+  --white: #fffdfa;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'DM Sans', sans-serif; }
+button, a { font: inherit; }
+a { color: inherit; }
+section { scroll-margin-top: 86px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

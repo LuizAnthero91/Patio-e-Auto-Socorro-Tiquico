@@ -1,0 +1,11 @@
+# Dependências e compilação
+/node_modules
+/dist
+/.angular
+
+# Editor e sistema
+/.vscode/*
+!/.vscode/extensions.json
+.DS_Store
+Thumbs.db
+npm-debug.log*

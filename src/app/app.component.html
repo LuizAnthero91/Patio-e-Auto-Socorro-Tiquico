@@ -1,0 +1,91 @@
+<header class="topbar">
+  <a class="brand" href="#inicio" (click)="closeMenu()" aria-label="Auto Socorro e Pátio Tíquico - início">
+    <span class="brand-mark">T</span>
+    <span><strong>TÍQUICO</strong><small>Auto Socorro & Pátio</small></span>
+  </a>
+
+  <button class="menu-button" type="button" (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" aria-label="Abrir menu">
+    <lucide-icon [img]="menuOpen() ? icons.X : icons.Menu" [size]="26"></lucide-icon>
+  </button>
+
+  <nav [class.open]="menuOpen()" aria-label="Navegação principal">
+    <a href="#inicio" (click)="closeMenu()">Início</a>
+    <a href="#servicos" (click)="closeMenu()">Serviços</a>
+    <a href="#empresa" (click)="closeMenu()">A empresa</a>
+    <a href="#contato" (click)="closeMenu()">Contato</a>
+  </nav>
+
+  <a class="header-cta" href="#contato"><lucide-icon [img]="icons.Phone" [size]="18"></lucide-icon> Solicitar atendimento</a>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="eyebrow"><span></span> Logística e remoção de veículos</p>
+      <h1>Força para transportar.<br><em>Cuidado em cada trajeto.</em></h1>
+      <p class="hero-copy">Auto socorro, reboque e logística para veículos leves, pesados e máquinas em Ibirité e região.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#contato">Solicitar orçamento <lucide-icon [img]="icons.ArrowRight" [size]="19"></lucide-icon></a>
+        <a class="button secondary" href="#servicos">Conhecer serviços</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <lucide-icon [img]="icons.MapPin" [size]="24"></lucide-icon>
+      <div><small>Nossa base</small><strong>Rua Ítalo Bernardes, 143</strong><span>Ibirité • Minas Gerais</span></div>
+    </div>
+    <div class="scroll-label">DESÇA PARA CONHECER <span></span></div>
+  </section>
+
+  <section class="intro" id="empresa">
+    <div class="section-kicker">TRANSPORTE COM RESPONSABILIDADE</div>
+    <div class="intro-grid">
+      <h2>Uma operação preparada para diferentes desafios.</h2>
+      <div>
+        <p>Atendemos necessidades de remoção e logística com atenção ao veículo, planejamento de rota e cuidado do início ao fim.</p>
+        <p>Da moto ao caminhão, do automóvel à máquina: avaliamos cada operação para realizar um transporte seguro e eficiente.</p>
+      </div>
+    </div>
+    <div class="values">
+      <article><lucide-icon [img]="icons.ShieldCheck" [size]="28"></lucide-icon><span><strong>Segurança</strong><small>Cuidado em cada etapa</small></span></article>
+      <article><lucide-icon [img]="icons.Route" [size]="28"></lucide-icon><span><strong>Logística</strong><small>Rotas bem planejadas</small></span></article>
+      <article><lucide-icon [img]="icons.Warehouse" [size]="28"></lucide-icon><span><strong>Pátio</strong><small>Estrutura em Ibirité</small></span></article>
+    </div>
+  </section>
+
+  <section class="services" id="servicos">
+    <div class="services-head">
+      <div><div class="section-kicker light">O QUE TRANSPORTAMOS</div><h2>Soluções que acompanham o tamanho da sua necessidade.</h2></div>
+      <p>Atendimento para pessoas, empresas, frotas e operações logísticas.</p>
+    </div>
+    <div class="service-grid">
+      @for (service of services; track service.title; let i = $index) {
+        <article class="service-card">
+          <span class="number">0{{ i + 1 }}</span>
+          <lucide-icon [img]="service.icon" [size]="38" [strokeWidth]="1.5"></lucide-icon>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.text }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="contact-main">
+      <div class="section-kicker">FALE COM A NOSSA EQUIPE</div>
+      <h2>Precisando transportar um veículo ou máquina?</h2>
+      <p>Conte o que você precisa, a origem e o destino. Nossa equipe avalia a operação e retorna com a melhor solução.</p>
+      <a class="button primary dark" href="tel:+5531000000000"><lucide-icon [img]="icons.Phone" [size]="20"></lucide-icon> Ligar para atendimento</a>
+      <small class="phone-note">Substitua pelo telefone oficial da empresa</small>
+    </div>
+    <aside class="contact-details">
+      <div><lucide-icon [img]="icons.MapPin" [size]="22"></lucide-icon><span><small>ENDEREÇO</small><strong>Rua Ítalo Bernardes, nº 143<br>Ibirité – MG</strong></span></div>
+      <div><lucide-icon [img]="icons.Clock3" [size]="22"></lucide-icon><span><small>ATENDIMENTO</small><strong>Consulte disponibilidade<br>com nossa equipe</strong></span></div>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="brand footer-brand"><span class="brand-mark">T</span><span><strong>TÍQUICO</strong><small>Auto Socorro & Pátio</small></span></div>
+  <p>Logística, remoção e transporte de veículos.</p>
+  <span>© {{ year }} Auto Socorro e Pátio Tíquico</span>
+</footer>
