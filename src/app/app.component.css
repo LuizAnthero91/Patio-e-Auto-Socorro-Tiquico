@@ -13,7 +13,7 @@ nav a:hover::after, nav a:focus-visible::after { right: 0; }
 .header-cta { display: flex; align-items: center; gap: 9px; text-decoration: none; padding: 11px 17px; border: 1px solid rgba(255,255,255,.55); font-size: .86rem; font-weight: 600; }
 .menu-button { display: none; border: 0; background: transparent; color: #fff; padding: 8px; }
 
-.hero { min-height: 760px; height: 100svh; position: relative; display: flex; align-items: center; overflow: hidden; padding: 110px clamp(22px, 8vw, 122px) 70px; color: var(--white); background: linear-gradient(90deg, rgba(26,18,12,.93) 0%, rgba(34,24,17,.72) 43%, rgba(35,24,16,.23) 72%, rgba(22,15,10,.24) 100%), url('/assets/tiquico-caminhao.webp') center/cover no-repeat; }
+.hero { min-height: 760px; height: 100svh; position: relative; display: flex; align-items: center; overflow: hidden; padding: 110px clamp(22px, 8vw, 122px) 70px; color: var(--white); background: linear-gradient(90deg, rgba(26,18,12,.93) 0%, rgba(34,24,17,.72) 43%, rgba(35,24,16,.23) 72%, rgba(22,15,10,.24) 100%), url('/assets/tiquico-caminhao.jpg') center/cover no-repeat; }
 .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(25,17,11,.57), transparent 34%); pointer-events: none; }
 .hero-content { position: relative; z-index: 2; max-width: 760px; }
 .eyebrow, .section-kicker { margin: 0 0 23px; color: var(--sand); font-size: .76rem; font-weight: 700; letter-spacing: .21em; }
@@ -75,6 +75,7 @@ h1 em { color: var(--cream); font-style: normal; font-weight: 500; }
 footer { min-height: 135px; padding: 35px clamp(22px, 5vw, 76px); display: flex; align-items: center; justify-content: space-between; gap: 24px; color: rgba(255,255,255,.64); background: var(--ink); font-size: .78rem; }
 .footer-brand { color: #fff; }
 footer p { margin: 0; }
+.footer-credits { display: flex; flex-direction: column; gap: 8px; }
 
 @media (max-width: 1050px) {
   .header-cta { display: none; }
